@@ -1,0 +1,20 @@
+<form id="myForm">
+   //open it in https://onecompiler.com/html/42u3swra8
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required minlength="3">
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    const username = document.getElementById('username').value;
+    if (username.length < 3) {
+      alert('Username must be at least 3 characters long.');
+      event.preventDefault(); 
+    }
+  });
+</script>
